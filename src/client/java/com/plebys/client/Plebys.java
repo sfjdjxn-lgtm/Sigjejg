@@ -14,7 +14,11 @@ public class Plebys implements ClientModInitializer {
     public void onInitializeClient() {
         // 1. Registramos todos los módulos disponibles
         ModuleManager.INSTANCE.init();
-
+        
+// Tecla para abrir el menú (RIGHT SHIFT por defecto)
+        PlebysKeybind.register();
+        ClientTickEvents.END_CLIENT_TICK.register(client -> PlebysKeybind.tick());
+        
         // 2. Comandos locales (.plebys <modulo>) para togglear sin GUI todavía
         PlebysCommands.register();
 
@@ -29,3 +33,5 @@ public class Plebys implements ClientModInitializer {
         System.out.println("[Plebys] Cargado correctamente.");
     }
 }
+import com.plebys.client.gui.PlebysKeybind;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
