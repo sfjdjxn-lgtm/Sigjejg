@@ -4,7 +4,6 @@
   "package": "com.plebys.client.mixin",
   "compatibilityLevel": "JAVA_21",
   "client": [
-    "ClientPlayerEntityMixin",
     "MinecraftClientMixin"
   ],
   "injectors": {
