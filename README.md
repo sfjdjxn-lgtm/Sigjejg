@@ -11,24 +11,7 @@ entiendas y extiendas vos mismo, en vez de heredar 5 años de deuda técnica.
 - Gradle (se descarga solo la primera vez vía wrapper, o usá tu Gradle local ≥ 8.12)
 - Conexión a internet la primera vez (para bajar Minecraft, mapeos Yarn y Fabric API)
 
-## Cómo conseguir el .jar sin instalar nada (recomendado)
-
-Este proyecto trae un workflow de GitHub Actions (`.github/workflows/build.yml`)
-que compila el mod por vos, en los servidores de GitHub:
-
-1. Creá un repositorio nuevo en GitHub (puede ser privado) y subí el
-   contenido de este zip
-2. Andá a la pestaña **Actions** del repo → el workflow "Build Plebys"
-   corre solo apenas hacés push a `main`
-3. Cuando termine (ícono verde ✓), entrá a esa ejecución y bajá el
-   artifact **plebys-jar** — ahí adentro está el `.jar` compilado
-4. Ese `.jar` es el que copiás a la carpeta `mods`
-
-Si no usás GitHub todavía, es cuestión de crear una cuenta gratis,
-crear un repo vacío, y subir los archivos desde la web (botón
-"Add file → Upload files", no hace falta usar git por consola).
-
-## Cómo compilarlo vos mismo en tu PC (alternativa)
+## Cómo correrlo
 
 ```bash
 ./gradlew genSources   # opcional, para tener el código de Minecraft legible en tu IDE
